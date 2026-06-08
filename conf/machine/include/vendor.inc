@@ -24,6 +24,3 @@ LICENSE_FLAGS_ACCEPTED += "commercial_gst-fluendo-mpegdemux \
 
 # Override introduced to mark components or features to be moved into OSS layer.
 OVERRIDES .= ":rdkv-oss"
-
-#Android raspberrypi Kernel version
-KERNEL_ARPI_MAJOR_VERSION = "6"

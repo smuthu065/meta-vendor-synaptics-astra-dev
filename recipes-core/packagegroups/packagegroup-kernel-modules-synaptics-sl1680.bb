@@ -1,4 +1,4 @@
-SUMMARY = "Custom package group for RaspberryPi-4 related firmware and kernel modules"
+SUMMARY = "Custom package group for Synaptics SL1680 kernel modules"
 
 LICENSE = "MIT"
 
@@ -13,6 +13,4 @@ PR = "r0"
 
 RDEPENDS:${PN} = " \
     kernel-modules \
-    linux-firmware-rpidistro-bcm43455 \
-    bluez-firmware-rpidistro-bcm4345c0-hcd \
     "

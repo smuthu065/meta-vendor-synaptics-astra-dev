@@ -1,40 +1,15 @@
-# This layer shall be common for all RPi variants.
+# Version pins for the Synaptics Astra vendor layer.
 
-#Linux kernel components
+# Linux kernel components
 
 PR:pn-linux-libc-headers = "r0"
 PACKAGE_ARCH:pn-linux-libc-headers = "${VENDOR_LAYER_EXTENSION}"
 
-PACKAGE_ARCH:pn-android-raspberrypi = "${VENDOR_LAYER_EXTENSION}"
+PV:pn-packagegroup-kernel-modules-synaptics-sl1680 = "1.0.0"
+PR:pn-packagegroup-kernel-modules-synaptics-sl1680 = "r0"
+PACKAGE_ARCH:pn-packagegroup-kernel-modules-synaptics-sl1680 = "${VENDOR_LAYER_EXTENSION}"
 
-PV:pn-packagegroup-kernel-modules-raspberrypi4 = "6.1.77"
-PR:pn-packagegroup-kernel-modules-raspberrypi4 = "r0"
-PREFERRED_VERSION_android-raspberrypi = "6.1.%"
-PACKAGE_ARCH:pn-packagegroup-kernel-modules-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
-PV:pn-linux-firmware-rpidistro = "1.0.0"
-PR:pn-linux-firmware-rpidistro = "r0"
-PACKAGE_ARCH:pn-linux-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
-
-#Platform components
-
-PV:pn-bluez-firmware-rpidistro = "1.0.0"
-PR:pn-bluez-firmware-rpidistro = "r0"
-PACKAGE_ARCH:pn-bluez-firmware-rpidistro = "${VENDOR_LAYER_EXTENSION}"
-
-PV:pn-userland = "20220323"
-PR:pn-userland = "r0"
-PACKAGE_ARCH:pn-userland = "${VENDOR_LAYER_EXTENSION}"
-
-PV:pn-pi-bluetooth = "0.1.17"
-PR:pn-pi-bluetooth = "r0"
-PACKAGE_ARCH:pn-pi-bluetooth = "${VENDOR_LAYER_EXTENSION}"
-
-PV:pn-udev-rules-rpi = "1.0"
-PR:pn-udev-rules-rpi = "r0"
-PACKAGE_ARCH:pn-udev-rules-rpi = "${VENDOR_LAYER_EXTENSION}"
-
-#OSS Components
+# OSS components
 
 PV:pn-libepoxy = "1.5.9"
 PR:pn-libepoxy = "r0"
@@ -92,7 +67,7 @@ PREFERRED_VERSION_vulkan-tools = "1.3.204.1"
 PREFERRED_VERSION_vulkan-headers = "1.3.204.1"
 PREFERRED_VERSION_vulkan-loader = "1.3.204.1"
 
-#Gstreamer components
+# Gstreamer components
 
 GST_VERSION = "1.18.5"
 GST_REVISION = "r0"
@@ -185,38 +160,7 @@ PV:pn-wayland-default-egl = "1.20.0"
 PR:pn-wayland-default-egl = "r0"
 PACKAGE_ARCH:pn-wayland-default-egl = "${VENDOR_LAYER_EXTENSION}"
 
-# RDKV HAL component versions
-
-# RDKV HAL component versions of raspberrypi4
-SRCREV:pn-devicesettings-hal-raspberrypi4 = "1.4.2"
-PV:pn-devicesettings-hal-raspberrypi4 = "1.4.2"
-PR:pn-devicesettings-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-devicesettings-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-hdmicec-hal-raspberrypi4 = "1.2.0"
-PV:pn-hdmicec-hal-raspberrypi4 = "1.2.0"
-PR:pn-hdmicec-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-hdmicec-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-iarmmgrs-hal-raspberrypi4 = "1.0.0"
-PV:pn-iarmmgrs-hal-raspberrypi4 = "2.0.1"
-PR:pn-iarmmgrs-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-iarmmgrs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
-PV:pn-pwrmgr-hal-raspberrypi4 = "1.2.0"
-PR:pn-pwrmgr-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-pwrmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.1"
-PV:pn-deepsleepmgr-hal-raspberrypi4 = "1.1.1"
-PR:pn-deepsleepmgr-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-deepsleepmgr-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
-PV:pn-mfrlibs-hal-raspberrypi4 = "1.1.0"
-PR:pn-mfrlibs-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-mfrlibs-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
+# RDKV component versions
 
 SRCREV:pn-sysint-soc = "1.1.14"
 PV:pn-sysint-soc = "1.1.14"
@@ -233,21 +177,6 @@ PV:pn-rdk-gstreamer-utils-platform = "1.2.0"
 PR:pn-rdk-gstreamer-utils-platform = "r0"
 PACKAGE_ARCH:pn-rdk-gstreamer-utils-platform = "${VENDOR_LAYER_EXTENSION}"
 
-SRCREV:pn-audio-service-rpi = "1.0"
-PV:pn-audio-service-rpi = "1.0"
-PR:pn-audio-service-rpi = "r0"
-PACKAGE_ARCH:pn-audio-service-rpi = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-gst-drm-plugins-rpi = "1.0"
-PV:pn-gst-drm-plugins-rpi = "1.0"
-PR:pn-gst-drm-plugins-rpi = "r0"
-PACKAGE_ARCH:pn-gst-drm-plugins-rpi = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-secapi2-adapter-rpi  = "1.0"
-PV:pn-secapi2-adapter-rpi  = "1.0"
-PR:pn-secapi2-adapter-rpi  = "r0"
-PACKAGE_ARCH:pn-secapi2-adapter-rpi  = "${VENDOR_LAYER_EXTENSION}"
-
 PREFERRED_VERSION_ffmpeg = "4.2.2"
 PR:pn-ffmpeg = "r2"
 PACKAGE_ARCH:pn-ffmpeg = "${VENDOR_LAYER_EXTENSION}"
@@ -262,11 +191,6 @@ SRCREV:pn-displayinfo-soc = "1.0.0"
 PV:pn-displayinfo-soc = "1.0.0"
 PR:pn-displayinfo-soc = "r0"
 PACKAGE_ARCH:pn-displayinfo-soc = "${VENDOR_LAYER_EXTENSION}"
-
-SRCREV:pn-miracast-hal-raspberrypi4 = "1.0.1"
-PV:pn-miracast-hal-raspberrypi4 = "1.0.1"
-PR:pn-miracast-hal-raspberrypi4 = "r0"
-PACKAGE_ARCH:pn-miracast-hal-raspberrypi4 = "${VENDOR_LAYER_EXTENSION}"
 
 PV:pn-gpu-layer = "1.0.0"
 PR:pn-gpu-layer = "r0"

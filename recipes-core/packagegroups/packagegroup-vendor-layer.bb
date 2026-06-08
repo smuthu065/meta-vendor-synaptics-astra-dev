@@ -13,7 +13,7 @@ PR = "r0"
 
 RDEPENDS:${PN} = " \
         ffmpeg \
-        pi-bluetooth \
+        packagegroup-kernel-modules-synaptics-sl1680 \
         sysint-soc \
         systemaudioplatform \
         virtual/vendor-westeros-soc \
@@ -21,12 +21,6 @@ RDEPENDS:${PN} = " \
         rdk-gstreamer-utils-platform \
         ${@bb.utils.contains('DISTRO_FEATURES', 'apparmor', 'apparmor-vendor', '', d)} \
         displayinfo-soc \
-        "
-
-# Include MACHINE specific packagegroup.
-RDEPENDS:${PN}:append:raspberrypi4 = " \
-        packagegroup-kernel-modules-raspberrypi4 \
-        packagegroup-hal-raspberrypi4 \
         "
 
 # These packages shall be moved to OSS layer in future.
