@@ -19,16 +19,16 @@ BBLAYERS ?= " \
         "
 
 # Common layers
-BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_VENDOR}' if os.path.isfile('${MANIFEST_PATH_OSS_VENDOR}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_RDK_HALIF_HEADERS}' if os.path.isfile('${MANIFEST_PATH_RDK_HALIF_HEADERS}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_CONFIG_COMMON}' if os.path.isfile('${MANIFEST_PATH_CONFIG_COMMON}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_PROFILE_CONFIG}' if os.path.isfile('${MANIFEST_PATH_PROFILE_CONFIG}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_PRODUCT_LAYER}' if os.path.isfile('${MANIFEST_PATH_PRODUCT_LAYER}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_COMMON_OSS_REFERENCE}' if os.path.isfile('${MANIFEST_PATH_COMMON_OSS_REFERENCE}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_BSP}' if os.path.isfile('${MANIFEST_PATH_BSP}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_PLATFORM}' if os.path.isfile('${MANIFEST_PATH_PLATFORM}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_OSS_EXT}' if os.path.isfile('${MANIFEST_PATH_OSS_EXT}/conf/layer.conf') else ''}"
-BBLAYERS =+ "${@'${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}' if os.path.isfile('${MANIFEST_PATH_IMAGE_SUPPORT_RDKE}/conf/layer.conf') else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_OSS_VENDOR') if d.getVar('MANIFEST_PATH_OSS_VENDOR') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_OSS_VENDOR'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_RDK_HALIF_HEADERS') if d.getVar('MANIFEST_PATH_RDK_HALIF_HEADERS') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_RDK_HALIF_HEADERS'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_CONFIG_COMMON') if d.getVar('MANIFEST_PATH_CONFIG_COMMON') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_CONFIG_COMMON'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_PROFILE_CONFIG') if d.getVar('MANIFEST_PATH_PROFILE_CONFIG') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_PROFILE_CONFIG'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_PRODUCT_LAYER') if d.getVar('MANIFEST_PATH_PRODUCT_LAYER') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_PRODUCT_LAYER'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') if d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_BSP') if d.getVar('MANIFEST_PATH_BSP') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_BSP'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_PLATFORM') if d.getVar('MANIFEST_PATH_PLATFORM') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_PLATFORM'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_OSS_EXT') if d.getVar('MANIFEST_PATH_OSS_EXT') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_OSS_EXT'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_RDKE') if d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_RDKE') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_RDKE'), 'conf/layer.conf')) else ''}"
 
 # Future reserved
 #BBLAYERS =+ "${@'${MANIFEST_PATH_OEM_OVERLAY_SOC}' if os.path.isfile('${MANIFEST_PATH_OEM_OVERLAY_SOC}/conf/layer.conf') else ''}"
