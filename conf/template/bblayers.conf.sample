@@ -26,6 +26,7 @@ BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_PROFILE_CONFIG') if d.getVar('MA
 BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_PRODUCT_LAYER') if d.getVar('MANIFEST_PATH_PRODUCT_LAYER') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_PRODUCT_LAYER'), 'conf/layer.conf')) else ''}"
 BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') if d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_COMMON_OSS_REFERENCE'), 'conf/layer.conf')) else ''}"
 BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_BSP') if d.getVar('MANIFEST_PATH_BSP') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_BSP'), 'conf/layer.conf')) else ''}"
+BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_SWUPDATE') if d.getVar('MANIFEST_PATH_SWUPDATE') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_SWUPDATE'), 'conf/layer.conf')) else ''}"
 BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_PLATFORM') if d.getVar('MANIFEST_PATH_PLATFORM') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_PLATFORM'), 'conf/layer.conf')) else ''}"
 BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_OSS_EXT') if d.getVar('MANIFEST_PATH_OSS_EXT') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_OSS_EXT'), 'conf/layer.conf')) else ''}"
 BBLAYERS =+ "${@' %s' % d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_RDKE') if d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_RDKE') and os.path.isfile(os.path.join(d.getVar('MANIFEST_PATH_IMAGE_SUPPORT_RDKE'), 'conf/layer.conf')) else ''}"
