@@ -14,13 +14,6 @@ PR = "r0"
 RDEPENDS:${PN} = " \
         ffmpeg \
         packagegroup-kernel-modules-synaptics-sl1680 \
-        sysint-soc \
-        systemaudioplatform \
-        virtual/vendor-westeros-soc \
-        virtual/vendor-westeros-sink \
-        rdk-gstreamer-utils-platform \
-        ${@bb.utils.contains('DISTRO_FEATURES', 'apparmor', 'apparmor-vendor', '', d)} \
-        displayinfo-soc \
         "
 
 # These packages shall be moved to OSS layer in future.
@@ -48,6 +41,5 @@ RDEPENDS:${PN}:append:rdkv-oss = " \
         westeros \
         westeros-simplebuffer \
         westeros-simpleshell \
-        gpu-layer \
         ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', " vulkan-loader vulkan-tools ", "", d)} \
         "
